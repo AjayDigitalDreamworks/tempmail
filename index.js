@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const TEMP_EMAIL_DOMAIN = 'mailinator.com';
+const TEMP_EMAIL_DOMAIN = 'devamail.tem';
 const mailboxes = {};
 
 

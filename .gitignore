@@ -1,0 +1,31 @@
+# Node modules folder ko ignore karo
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Optional npm cache folder
+.npm
+
+# Debugger files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build output (agar koi build hota hai)
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/

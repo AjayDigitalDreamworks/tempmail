@@ -81,7 +81,7 @@
     let emails = [];
 
     async function generateEmail() {
-      const res = await axios.post('http://localhost:3001/create-email');
+      const res = await axios.post('https://tempmail-h4gj.onrender.com/create-email');
       currentEmail = res.data.email;
       emailInput.value = currentEmail;
       loadEmails();
@@ -91,7 +91,7 @@
       if (!currentEmail) return;
 
       try {
-        const res = await axios.get(`http://localhost:3001/emails/${encodeURIComponent(currentEmail)}?limit=50`);
+        const res = await axios.get(`https://tempmail-h4gj.onrender.com/emails/${encodeURIComponent(currentEmail)}?limit=50`);
         emails = res.data.emails;
         renderEmailList();
         emailContent.innerHTML = emails.length ? 'Select an email to read.' : 'No emails yet.';
@@ -146,7 +146,7 @@
     deleteAllBtn.onclick = async () => {
       if (!currentEmail) return;
       if (confirm('Delete all emails for this address?')) {
-        await axios.delete(`http://localhost:3001/emails/${encodeURIComponent(currentEmail)}`);
+        await axios.delete(`https://tempmail-h4gj.onrender.com/emails/${encodeURIComponent(currentEmail)}`);
         loadEmails();
         emailContent.innerHTML = 'All emails deleted.';
       }
